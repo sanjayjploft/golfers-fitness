@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="subscribe-box">
               <input type="email" placeholder="Email Address" />
               <button>
-                <img src="/images/send-icon.SVG" alt="arrow" />
+                <img src="/images/send-icon.svg" alt="arrow" />
               </button>
             </div>
 
