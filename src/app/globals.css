@@ -4143,6 +4143,93 @@ button.discard-changes:hover {
 }
 
 /* MOBILE */
+.privacy-page-wrapper {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
+
+.privacy-page-header {
+  margin-bottom: 30px;
+}
+
+.privacy-page-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+  font-weight: 600;
+}
+
+.privacy-page-title {
+  margin-top: 10px;
+  color: #161513;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.privacy-page-updated {
+  color: #777;
+  margin-top: 8px;
+}
+
+.privacy-page-intro {
+  border-left: 4px solid #bba57a;
+  margin-bottom: 40px;
+  padding-left: 16px;
+  color: #4a4a4a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31.5px;
+}
+
+.privacy-page-section {
+  margin-bottom: 45px;
+}
+
+.privacy-page-heading {
+  margin-bottom: 15px;
+  color: #161513;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.privacy-page-list {
+  padding-left: 20px;
+}
+
+.privacy-page-list li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.privacy-page-note {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 0 12px 12px 0;
+  border-left: 6px solid #a59b88;
+  background: #ebedea;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.5px;
+}
+
+.privacy-page-note-title {
+  margin-bottom: 5px;
+  display: block;
+  color: #a59b88;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
 
 @media (max-width: 1024px) {
   .profile-ui-card {
