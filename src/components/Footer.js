@@ -24,16 +24,16 @@ export default function Footer() {
             <h6 className="footer-title">COMPANY</h6>
             <ul className="footer-links">
               <li>
-                <a href="#">About Us</a>
+                <Link href="/about-us">About Us</Link>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <Link href="#">Careers</Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link href="#">Contact</Link>
               </li>
               <li>
-                <a href="#">Success Stories</a>
+                <Link href="#">Success Stories</Link>
               </li>
             </ul>
           </div>
@@ -69,9 +69,9 @@ export default function Footer() {
           <p>© 2024 ELITE FIT CO. ALL RIGHTS RESERVED.</p>
 
           <div className="footer-policy">
-            <a href="#">PRIVACY POLICY</a>
-            <a href="#">TERMS OF SERVICE</a>
-            <a href="#">COOKIE POLICY</a>
+            <Link href="/privacy-policy">PRIVACY POLICY</Link>
+            <Link href="/terms-conditions">TERMS OF SERVICE</Link>
+            <Link href="#">COOKIE POLICY</Link>
           </div>
         </div>
       </div>
