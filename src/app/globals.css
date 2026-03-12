@@ -4764,6 +4764,9 @@ button.discard-changes:hover {
   textarea.form-control {
     min-height: 140px;
   }
+  .signin-text a {
+    display: inline-block;
+  }
 }
 .light-btn:hover {
   border-color: #393838;
