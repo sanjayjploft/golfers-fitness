@@ -4761,6 +4761,9 @@ button.discard-changes:hover {
   .pay-btn {
     font-size: 16px;
   }
+  textarea.form-control {
+    min-height: 140px;
+  }
 }
 .light-btn:hover {
   border-color: #393838;
