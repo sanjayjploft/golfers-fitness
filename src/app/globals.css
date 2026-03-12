@@ -4391,7 +4391,7 @@ button.discard-changes:hover {
   line-height: 16px;
 }
 .comment-actions {
-  display: flex;  
+  display: flex;
   gap: 15px;
   font-size: 13px;
   color: #666;
@@ -4745,6 +4745,21 @@ button.discard-changes:hover {
   .signup-wrapper {
     min-height: 90vh;
     padding-top: 20px;
+  }
+  .top-heading {
+    margin-bottom: 20px;
+  }
+  .top-heading h1 {
+    font-size: 24px;
+  }
+  .subscribe-title {
+    font-size: 18px;
+  }
+  .subscribe-sub {
+    font-size: 14px;
+  }
+  .pay-btn {
+    font-size: 16px;
   }
 }
 .light-btn:hover {
