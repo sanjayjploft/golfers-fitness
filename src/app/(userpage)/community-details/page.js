@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 
 import { useRef, useState } from "react";
 
@@ -69,8 +69,7 @@ function page() {
                   poster="/images/video-thumb.png"
                   preload="metadata"
                   onLoadedMetadata={handleLoaded}
-                  onTimeUpdate={handleTimeUpdate}
-                >
+                  onTimeUpdate={handleTimeUpdate}>
                   <source src="/images/workout.mp4" type="video/mp4" />
                 </video>
 
@@ -99,8 +98,7 @@ function page() {
                 </button>
                 <button
                   className="post-btn comments"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
+                  onClick={() => setIsOpen(!isOpen)}>
                   <img src="/images/comment.svg" alt="" />
                   <span>89</span>
                 </button>
@@ -144,8 +142,7 @@ function page() {
                 </div>
                 <div
                   className="discussion-wrapper mx-auto"
-                  style={{ maxWidth: "850px" }}
-                >
+                  style={{ maxWidth: "850px" }}>
                   {/* --- Main Comment (Chris Walker) --- */}
                   <div className="d-flex gap-3 mb-2">
                     <img
@@ -169,8 +166,7 @@ function page() {
                         </div>
                         <p
                           className="mb-0 text-secondary lh-base"
-                          style={{ fontSize: "0.95rem" }}
-                        >
+                          style={{ fontSize: "0.95rem" }}>
                           The way he stays on the back hip is insane. Marcus,
                           any drills for preventing that front knee from
                           collapsing too early? I find my velo dropping after 30
@@ -183,8 +179,7 @@ function page() {
                         <div className="d-flex align-items-center gap-1 text-secondary cursor-pointer">
                           <i
                             className="bi bi-chevron-up fw-bold"
-                            style={{ fontSize: "0.8rem" }}
-                          ></i>
+                            style={{ fontSize: "0.8rem" }}></i>
                           <span className="fw-bold small">12</span>
                         </div>
                         <span className="text-secondary fw-bold small cursor-pointer">
@@ -220,8 +215,7 @@ function page() {
                             </div>
                             <p
                               className="mb-0 text-secondary lh-base"
-                              style={{ fontSize: "0.95rem" }}
-                            >
+                              style={{ fontSize: "0.95rem" }}>
                               Great observation, Chris. Try the 'Wall Drive'
                               drill. Keep the front hip closed as long as
                               possible. Velo drop usually points to a core
@@ -235,8 +229,7 @@ function page() {
                             <div className="d-flex align-items-center gap-1 text-secondary cursor-pointer">
                               <i
                                 className="bi bi-chevron-up fw-bold"
-                                style={{ fontSize: "0.8rem" }}
-                              ></i>
+                                style={{ fontSize: "0.8rem" }}></i>
                               <span className="fw-bold small">4</span>
                             </div>
                             <span className="text-secondary fw-bold small cursor-pointer">
@@ -250,6 +243,105 @@ function page() {
                 </div>
               </div>
             )}
+            <section className="discussion-section">
+              <div className="discussion-wrapper">
+                {/* Header */}
+                <div className="discussion-header">
+                  <h4 className="discussion-title">Discussion (48)</h4>
+
+                  <div className="discussion-sort">
+                    <span>Most Recent</span>
+                    <img src="/images/arrow-down.svg" className="sort-icon" />
+                  </div>
+                </div>
+
+                {/* Post Input */}
+                <div className="discussion-input-box">
+                  <img
+                    src="/images/user-avatar.png"
+                    className="discussion-avatar"
+                  />
+
+                  <div className="discussion-input-area">
+                    <Form.Control
+                      type="text"
+                      placeholder="Ask a coach or share your thoughts..."
+                      className="discussion-input"
+                    />
+
+                    <div className="discussion-input-actions">
+                      <img
+                        src="/images/attach-icon.svg"
+                        className="attach-icon"
+                      />
+
+                      <button className="discussion-post-btn">POST</button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Comment */}
+                <div className="discussion-comment">
+                  <div className="comment-avatar">
+                    <img src="/images/user2.png" />
+                  </div>
+
+                  <div className="comment-content">
+                    <div className="comment-header">
+                      <h6>Chris Walker</h6>
+                      <span className="comment-time">45m ago</span>
+                    </div>
+
+                    <p className="comment-text">
+                      The way he stays on the back hip is insane. Marcus, any
+                      drills for preventing that front knee from collapsing too
+                      early? I find my velo dropping after 30 pitches.
+                    </p>
+
+                    <div className="comment-actions">
+                      <span className="comment-likes">
+                        <img src="/images/upvote.svg" /> 12
+                      </span>
+
+                      <span className="comment-reply">Reply</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Reply */}
+                <div className="discussion-reply">
+                  <div className="reply-avatar">
+                    <img src="/images/user3.png" />
+                  </div>
+
+                  <div className="reply-content">
+                    <div className="reply-header">
+                      <div className="reply-name">
+                        <h6>Marcus Henderson</h6>
+                        <span className="verified-badge">VERIFIED PRO</span>
+                      </div>
+
+                      <span className="reply-time">12m ago</span>
+                    </div>
+
+                    <p className="reply-text">
+                      Great observation, Chris. Try the 'Wall Drive' drill. Keep
+                      the front hip closed as long as possible. Velo drop
+                      usually points to a core stability issue in the 3rd phase.
+                      DM me your swing clip!
+                    </p>
+
+                    <div className="reply-actions">
+                      <span className="reply-likes">
+                        <img src="/images/upvote.svg" /> 4
+                      </span>
+
+                      <span className="reply-btn">Reply</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </Col>
           <Col md={4} className="d-none d-lg-block">
             <div className="trending-card">
