@@ -118,17 +118,17 @@ a.nav-link {
 .custom-toggler.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-header.main-header.menu-open .collapse:not(.show) {
+.collapse.navbar-collapse.show {
+  background: #f6f8f6;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
   display: block;
   position: absolute;
-  background: #fff;
+  top: 56px;
   left: 0;
   right: 0;
-  padding: 20px;
-  top: 50px;
-  border-radius: 0px 0px 20px 20px;
 }
-header.main-header.menu-open .collapse:not(.show) a.nav-link {
+.collapse.navbar-collapse.show a.nav-link {
   text-align: left;
   margin-bottom: 20px;
 }
@@ -927,6 +927,9 @@ header.main-header.menu-open .collapse:not(.show) a.nav-link {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-btn img {
@@ -1700,7 +1703,10 @@ li {
     opacity: 1;
   }
 }
-
+.header-menu .nav-link.active {
+  color: #a59b88;
+  font-weight: 600;
+}
 /* MOBILE */
 
 @media (max-width: 480px) {
@@ -1714,14 +1720,15 @@ li {
   border-bottom: 1px solid #eee;
 }
 .toggle-btn {
-  border: none;
-  height: 40px;
-  outline: none;
   text-align: center;
-  width: 40px;
+  background: #a49a871a;
+  border: none;
   border-radius: 9999px;
-  background: rgba(164, 154, 135, 0.1);
+  outline: none;
+  width: 48px;
+  height: 48px;
   padding: 0 10px;
+  font-size: 24px;
 }
 
 .header-right {
@@ -3345,7 +3352,7 @@ main {
   border: none;
   margin-right: 10px;
   border-radius: 8px;
-  background: #a59b88;
+  background: #4a4a4a;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 10px 24px;
   color: #fff;
@@ -3401,9 +3408,9 @@ main {
 .profile-ui-save {
   border: none;
   border-radius: 8px;
-  background: rgba(165, 155, 136, 0.2);
+  background: #4a4a4a;
   padding: 8px 24px;
-  color: #a59b88;
+  color: #fff;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -3532,7 +3539,7 @@ main {
 .plan-ui-change {
   border: none;
   border-radius: 8px;
-  background: #a59b88;
+  background: #4a4a4a;
   padding: 12px 15px;
   color: #fff;
   text-align: center;
@@ -3743,7 +3750,7 @@ table.plan-ui-table td {
   margin-bottom: 24px;
 }
 
-a.upgrade-plan {
+.upgrade-plan {
   border-radius: 80px;
   background: var(--Primary-Color, #4a4a4a);
   padding: 12px 0;
@@ -3780,7 +3787,7 @@ a.upgrade-plan {
   font-size: 12px;
   color: #fff;
 }
-.change-plan-card.upgrade-card a.upgrade-plan {
+.change-plan-card.upgrade-card .upgrade-plan {
   background: var(--White, #fff);
   color: #4a4a4a;
   margin-top: 20px;
@@ -3816,9 +3823,9 @@ a.upgrade-plan {
 
 .send-message {
   border-radius: 8px;
-  background: #a59b88;
+  background: #4a4a4a;
   padding: 16px 40px;
-  border-color: #a59b88;
+  border-color: #4a4a4a;
 }
 .contact-info h4 {
   color: #161513;
@@ -4398,9 +4405,8 @@ button.discard-changes:hover {
   }
   .app-img-card img {
     width: 70%;
-    margin: 0 auto;
+    margin: 20px auto 0px;
     display: block;
-    margin-bottom: 20px;
   }
   .app-content-card .featured-list li {
     font-size: 16px;
@@ -4430,9 +4436,14 @@ button.discard-changes:hover {
     text-align: center;
   }
   .cms-link {
+    justify-content: center;
     gap: 10px;
-    flex-direction: column;
+    margin-top: 10px;
   }
+  .copy-text-footer p {
+    text-align: center;
+  }
+
   .otp-input {
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
   }
@@ -4500,4 +4511,28 @@ button.discard-changes:hover {
   .subscribe-card {
     padding: 15px;
   }
+  .signup-wrapper {
+    min-height: 90vh;
+    padding-top: 20px;
+  }
+}
+.light-btn:hover {
+  border-color: #393838;
+}
+.profile-ui-save:hover,
+.profile-ui-edit:hover,
+.profile-ui-share:hover,
+.profile-ui-manage:hover,
+.plan-ui-change:hover,
+.upgrade-plan:hover,
+.send-message:hover,
+.logout-md-btn:hover,
+.btn-bg-header:hover,
+.get-started-btn:hover,
+.theme-btn:hover,
+.show-btn button:hover,
+.dark-btn:hover {
+  background: #393838;
+  border-color: #393838;
+  color: #fff;
 }

@@ -1,9 +1,16 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleMenuClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className={`main-header ${menuOpen ? "menu-open" : ""}`}>
@@ -24,8 +31,6 @@ export default function Header() {
               <button
                 className={`navbar-toggler custom-toggler ${menuOpen ? "open" : ""}`}
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainMenu"
                 onClick={() => setMenuOpen(!menuOpen)}>
                 <span></span>
                 <span></span>
@@ -35,29 +40,42 @@ export default function Header() {
 
             {/* Menu */}
             <div className="col-lg-11">
-              <div className="collapse navbar-collapse" id="mainMenu">
+              <div
+                className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
                 {/* Menu */}
                 <ul className="navbar-nav mx-auto header-menu">
                   <li className="nav-item">
-                    <Link className="nav-link" href="/how-it-works">
+                    <Link
+                      className={`nav-link ${pathname === "/how-it-works" ? "active" : ""}`}
+                      href="/how-it-works"
+                      onClick={handleMenuClick}>
                       How It Works
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
+                    <Link
+                      className={`nav-link ${pathname === "" ? "active" : ""}`}
+                      href=""
+                      onClick={handleMenuClick}>
                       Coaches
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
+                    <Link
+                      className={`nav-link ${pathname === "" ? "active" : ""}`}
+                      href=""
+                      onClick={handleMenuClick}>
                       Results
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" href="/download-app">
+                    <Link
+                      className={`nav-link ${pathname === "/download-app" ? "active" : ""}`}
+                      href="/download-app"
+                      onClick={handleMenuClick}>
                       Download App
                     </Link>
                   </li>
@@ -65,11 +83,17 @@ export default function Header() {
 
                 {/* Buttons */}
                 <div className="header-buttons d-lg-flex">
-                  <Link href="/login" className="btn-text-header">
+                  <Link
+                    href="/login"
+                    className={`btn-text-header ${pathname === "/login" ? "active" : ""}`}
+                    onClick={handleMenuClick}>
                     Login
                   </Link>
 
-                  <Link href="/get-started" className="btn-bg-header">
+                  <Link
+                    href="/get-started"
+                    className="btn-bg-header"
+                    onClick={handleMenuClick}>
                     Get Started
                   </Link>
                 </div>

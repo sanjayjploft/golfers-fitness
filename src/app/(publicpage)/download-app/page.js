@@ -38,12 +38,12 @@ export default function page() {
       <section className="page-info-section">
         <div className="container">
           <Row className="align-items-center">
-            <Col lg={6}>
+            <Col lg={6} className="order-2 order-lg-1">
               <div className="app-img-card">
                 <img src="/images/app-img-02.png" />
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="order-1 order-lg-2">
               <div className="app-content-card">
                 <h3>Personalized workouts for every fitness level</h3>
                 <ul className="featured-list">
