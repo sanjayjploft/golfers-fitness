@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
 
               <li>
-                <Link href="/contact-support">Contact</Link>
+                <Link href="/contact-us">Contact</Link>
               </li>
               <li>
                 <Link href="/how-it-works">How It Works</Link>
@@ -59,10 +59,10 @@ export default function Footer() {
                 <img src="/images/fb.svg" />
               </Link>
               <Link href="">
-                <img src="/images/cmra.svg" />
+                <img src="/images/insta-icon.svg" />
               </Link>
               <Link href="">
-                <img src="/images/video.svg" />
+                <img src="/images/youtube-icon.svg" />
               </Link>
             </div>
           </div>

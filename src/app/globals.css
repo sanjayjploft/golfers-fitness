@@ -197,7 +197,9 @@ a.nav-link {
   font-weight: 600;
   line-height: 24px;
 }
-
+.hero-btn:hover {
+    background: #262525;
+}
 .methods-section {
   padding: 60px 0;
   background: #4a4a4a;
@@ -1703,9 +1705,8 @@ li {
     opacity: 1;
   }
 }
-.header-menu .nav-link.active {
+.header-menu .nav-link.active, .header-menu .nav-link:hover, .btn-text-header:hover {
   color: #a59b88;
-  font-weight: 600;
 }
 /* MOBILE */
 
@@ -2389,6 +2390,7 @@ li {
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 155.556% */
+  margin-bottom: 0;
 }
 
 .card-ai-insights p {
@@ -2691,6 +2693,14 @@ li {
   .stats-row .col-md-4 {
     margin-bottom: 15px;
   }
+  .card-ai-insights h5 img {
+    display: block;
+    margin-bottom: 10px;
+}
+.card-ai-insights{
+  margin-top: 0;
+}
+
 }
 
 .drillLib_wrapper {
@@ -2762,6 +2772,7 @@ li {
   border-radius: 16px;
   border: 1px solid #e8ebe9;
   background: #fff;
+  cursor: pointer;
 }
 
 .drillLib_img {
@@ -4241,10 +4252,7 @@ button.discard-changes:hover {
   padding: 30px 0;
 }
 
-.discussion-wrapper {
-  max-width: 850px;
-  margin: auto;
-}
+ 
 
 .discussion-header {
   display: flex;
@@ -4498,6 +4506,9 @@ button.discard-changes:hover {
 }
 
 @media (max-width: 768px) {
+  .tabs button {
+    margin-left: 5px;
+}
   .hero-section {
     height: 60vh;
   }
@@ -4767,6 +4778,20 @@ button.discard-changes:hover {
   .signin-text a {
     display: inline-block;
   }
+  .dash-head h1 { 
+    font-size: 24px; 
+}
+.dash-head p { 
+    font-size: 12px; 
+}
+.workout-wrapper h2.page-title {
+    font-size: 24px;
+}
+.workout-wrapper .page-sub { 
+    margin-bottom: 20px;
+    font-size: 14px; 
+    line-height: 1.4;
+}
 }
 .light-btn:hover {
   border-color: #393838;
@@ -4788,4 +4813,19 @@ button.discard-changes:hover {
   background: #393838;
   border-color: #393838;
   color: #fff;
+}
+
+.form-check .form-check-label a {
+    /* color: #605f5d; */
+    text-decoration: underline;
+}
+.form-check .form-check-label a:hover, .footer-links a:hover, .footer-policy a:hover {
+    color: #a39a88; 
+}
+  .cms-link a:hover {
+    color: #4a4a4a; 
+}
+.get-started-content .start-btn:hover {
+    color: #fff;
+    background: #30322f;
 }
