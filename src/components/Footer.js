@@ -26,14 +26,18 @@ export default function Footer() {
               <li>
                 <Link href="/about-us">About Us</Link>
               </li>
+
               <li>
-                <Link href="#">Careers</Link>
+                <Link href="/contact-support">Contact</Link>
               </li>
               <li>
-                <Link href="#">Contact</Link>
+                <Link href="/how-it-works">How It Works</Link>
               </li>
               <li>
-                <Link href="#">Success Stories</Link>
+                <Link href="/download-app">Download App</Link>
+              </li>
+              <li>
+                <Link href="#">Results</Link>
               </li>
             </ul>
           </div>
@@ -71,7 +75,6 @@ export default function Footer() {
           <div className="footer-policy">
             <Link href="/privacy-policy">PRIVACY POLICY</Link>
             <Link href="/terms-conditions">TERMS OF SERVICE</Link>
-            <Link href="#">COOKIE POLICY</Link>
           </div>
         </div>
       </div>
