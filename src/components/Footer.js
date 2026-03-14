@@ -70,7 +70,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          <p>© 2024 ELITE FIT CO. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 ELITE FIT CO. ALL RIGHTS RESERVED.</p>
 
           <div className="footer-policy">
             <Link href="/privacy-policy">PRIVACY POLICY</Link>

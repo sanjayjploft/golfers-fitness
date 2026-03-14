@@ -38,7 +38,7 @@ export default function EliteCoaches() {
   ];
 
   return (
-    <section className="coaches-section">
+    <section className="coaches-section" id="viewcoaches">
       <div className="container">
         <Row className="align-items-center">
           <Col lg={6}>

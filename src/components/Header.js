@@ -56,7 +56,7 @@ export default function Header() {
                   <li className="nav-item">
                     <Link
                       className={`nav-link ${pathname === "" ? "active" : ""}`}
-                      href=""
+                      href="#viewcoaches"
                       onClick={handleMenuClick}>
                       Coaches
                     </Link>
