@@ -85,8 +85,14 @@ export default function SignupForm() {
 
           <Form.Check
             type="checkbox"
-            label="I agree to the Terms of Service and Privacy Policy"
             className="mt-3"
+            label={
+              <>
+                I agree to the{" "}
+                <Link href="/terms-conditions">Terms of Service</Link> and{" "}
+                <Link href="/privacy-policy">Privacy Policy</Link>
+              </>
+            }
           />
 
           <Link
