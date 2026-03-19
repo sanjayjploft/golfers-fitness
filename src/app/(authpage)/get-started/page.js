@@ -34,10 +34,7 @@ export default function SignupForm() {
             </Col>
           </Row>
 
-          <Form.Group>
-            <Form.Label>Date of Birth</Form.Label>
-            <Form.Control type="date" />
-          </Form.Group>
+     
 
           <Form.Group className="input-icon">
             <Form.Label>Email Address</Form.Label>
@@ -48,15 +45,7 @@ export default function SignupForm() {
             </div>
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label>Country</Form.Label>
-            <Form.Select>
-              <option>Select</option>
-              <option>India</option>
-              <option>USA</option>
-              <option>UK</option>
-            </Form.Select>
-          </Form.Group>
+      
 
           <Form.Group className="input-icon">
             <Form.Label>Password</Form.Label>
