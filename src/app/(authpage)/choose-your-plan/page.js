@@ -102,7 +102,7 @@ export default function SignupForm() {
 
           {/* BUTTON */}
 
-          <Link href={"/dashboard"} className="pay-btn w-100">
+          <Link href={"/started-on-app"} className="pay-btn w-100">
             Continue to Pay
           </Link>
         </div>

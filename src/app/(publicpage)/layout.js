@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
     "/forgot-password",
     "/verification",
     "/password-changed",
+     "/started-on-app",
   ];
 
   const hideFooter = hideFooterRoutes.some((route) =>
