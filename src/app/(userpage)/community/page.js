@@ -242,13 +242,17 @@ const toggleVideo = () => {
                   <div className="postHeader">
                     <div className="postAvatar">
                       <img
-                        src="/images/post-avtar.png"
+                        src="/images/post-avtar-2.png"
                         className="postAvatar-img"
                       />
                     </div>
 
                     <div>
-                      <div className="postName">Marcus Chen</div>
+                      <div className="postName">
+                        {" "}
+                        Elena Vance{" "}
+                        <img src="/images/verified.svg" className="me-3" />
+                      </div>
 
                       <div className="postMeta">
                         Professional CrossFit Athlete • 2h ago
@@ -284,9 +288,7 @@ const toggleVideo = () => {
                     )}
 
                     {/* duration */}
-                    <span className="videoDuration">
-                      {current} / {duration}
-                    </span>
+                    <span className="videoDuration">03:45</span>
 
                     {/* tag */}
                     <span className="videoTag">TUTORIAL</span>
@@ -402,9 +404,7 @@ const toggleVideo = () => {
                     )}
 
                     {/* duration */}
-                    <span className="videoDuration">
-                      {current} / {duration}
-                    </span>
+                    <span className="videoDuration">03:45</span>
 
                     {/* tag */}
                     <span className="videoTag">TUTORIAL</span>
