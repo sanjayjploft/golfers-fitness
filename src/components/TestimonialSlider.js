@@ -11,15 +11,15 @@ const testimonials = [
   {
     id: 1,
     text: "EliteFit completely changed the way I train. The personalized workouts and progress tracking keep me motivated every day. It feels like having a personal trainer in my pocket.",
-    name: "Carlos F.",
-    role: "Fitness Enthusiast",
+    name: "Michael T.",
+    role: "Gym Member",
     img: "/images/testimonial-person-01.png",
   },
   {
     id: 2,
     text: "EliteFit completely changed the way I train. The personalized workouts and progress tracking keep me motivated every day.",
-    name: "Michael T.",
-    role: "Gym Member",
+    name: "Carlos F.",
+    role: "Fitness Enthusiast",
     img: "/images/testimonial-person-02.png",
   },
   {
