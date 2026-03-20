@@ -69,7 +69,14 @@ export default function ProfileUI() {
                   <Form.Control defaultValue="185" />
                 </Form.Group>
               </Col>
-
+<Col md={12}>
+                <Form.Group>
+                  <Form.Label>Age</Form.Label>
+                  <Form.Control  
+                    defaultValue="24"
+                  />
+                </Form.Group>
+              </Col>
               <Col md={12}>
                 <Form.Group>
                   <Form.Label>FITNESS GOALS</Form.Label>

@@ -56,6 +56,10 @@ export default function SignupForm() {
             className="get-started-btn w-100 mt-3">
             Verify
           </Link>
+
+                 <Link href={""} className="back-login w-100 mt-3">
+            <img src="/images/resend_icon.svg" /> Resend Code
+          </Link>
         </Form>
       </div>
     </div>

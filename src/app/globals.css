@@ -4829,3 +4829,27 @@ button.discard-changes:hover {
     color: #fff;
     background: #30322f;
 }
+
+
+.start_app_sec .card{
+  background-color: #F4F8F2;
+    border-radius: 16px;
+ 
+}
+
+
+.start_app_sec .card .list-group-item{
+  margin-bottom: 20px;
+  padding: 0px !important;
+}
+
+.start_app_sec h5{
+  font-size: 18px;
+}
+.install-btn{
+
+}
+
+.started-app-bg {
+  background-image: url("/images/started-app-bg.png");
+}
