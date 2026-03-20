@@ -55,7 +55,8 @@ export default function PrivacyPolicy() {
 
               <div className="privacy-page-note">
                 <span className="privacy-page-note-title">
-                  IN PLAIN ENGLISH
+                  <img src="/images/lang-icon.svg" className="me-2" /> IN PLAIN
+                  ENGLISH
                 </span>
 
                 <p>
@@ -105,7 +106,8 @@ export default function PrivacyPolicy() {
 
               <div className="privacy-page-note">
                 <span className="privacy-page-note-title">
-                  IN PLAIN ENGLISH
+                  <img src="/images/lang-icon.svg" className="me-2" />
+                   IN PLAIN ENGLISH
                 </span>
 
                 <p>

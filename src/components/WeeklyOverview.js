@@ -26,8 +26,15 @@ export default function WeeklyOverview() {
               ${item.status === "done" ? "week-done" : ""}
               ${item.status === "active" ? "week-active" : ""}
             `}>
-                {item.status === "done" && "✓"}
-                {item.status === "active" && "•"}
+                {item.status === "done" && (
+                  <img
+                    src="/images/tickmark-done.svg"
+                    alt="done"
+                    className="done-icon"
+                  />
+                )}
+                {item.status === "active" && (
+                <span className="active-work-out"></span>                )}
               </div>
             </div>
           ))}

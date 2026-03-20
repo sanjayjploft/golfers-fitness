@@ -10,6 +10,7 @@ export default function Home() {
       <section className="hero-section">
         <div className="container">
           <div className="hero-content">
+            <div className="performance-tags">Performance Tech 2.0</div>
             <h1>
               TRAIN LIKE <br /> A PRO.
             </h1>
@@ -37,8 +38,6 @@ export default function Home() {
           </div>
 
           <Row className="align-items-center">
-            {/* LEFT IMAGE */}
-
             <Col lg={5}>
               <div className="tracking-img">
                 <img

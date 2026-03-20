@@ -165,7 +165,20 @@ a.nav-link {
   align-items: center;
   color: white;
 }
-
+.performance-tags {
+    border-radius: 9999px;
+    border: 1px solid rgba(164, 154, 135, 0.30);
+    background: rgba(0, 0, 0, 0.30);
+    padding: 6px 16px;
+    color: #A49A87; 
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 15px;
+    text-transform: uppercase;
+    width: max-content;
+    margin-bottom: 32px;
+}
 .hero-content h1 {
   color: #fff;
   font-size: 96px;
@@ -2297,6 +2310,7 @@ li {
 .section-duration {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .section-duration h4 {
@@ -4226,7 +4240,7 @@ button.discard-changes:hover {
 
 .privacy-page-note {
   margin-top: 20px;
-  padding: 18px;
+  padding: 36px 24px 44px 24px;
   border-radius: 0 12px 12px 0;
   border-left: 6px solid #a59b88;
   background: #ebedea;
@@ -4236,7 +4250,26 @@ button.discard-changes:hover {
   font-weight: 400;
   line-height: 24.5px;
 }
-
+.privacy-page-note p {
+    margin-bottom: 0;
+    color: #374151; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+.privacy-page-note u {
+    color: #374151; 
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font; 
+}
+.privacy-page-note a {
+    color: #A59B88;
+}
 .privacy-page-note-title {
   margin-bottom: 5px;
   display: block;
@@ -4490,9 +4523,9 @@ button.discard-changes:hover {
   .plan-ui-icon img {
     width: auto;
   }
-  .main-wrapper {
+  /* .main-wrapper {
     display: block;
-  }
+  } */
   .plan-ui-wrapper {
     padding: 0;
   }
@@ -4846,10 +4879,23 @@ button.discard-changes:hover {
 .start_app_sec h5{
   font-size: 18px;
 }
-.install-btn{
-
-}
+ 
 
 .started-app-bg {
   background-image: url("/images/started-app-bg.png");
+}
+.active-work-out {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #4A4A4A; /* green */
+  border-radius: 50%; 
+}
+.eye-icon-setting {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
 }

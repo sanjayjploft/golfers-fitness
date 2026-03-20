@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function TermsConditions() {
@@ -108,16 +109,16 @@ export default function TermsConditions() {
                 <p>
                   We want you to be completely satisfied with Elite Fitness. If
                   you are not satisfied with your subscription, we offer a
-                  <strong> 14-day money-back guarantee </strong>
+                  <u className=""> 14-day money-back guarantee </u>
                   for first-time subscribers. This does not apply to renewals or
                   plan changes.
                 </p>
 
                 <p>
                   To request a refund, please contact our support team at
-                  support@elitefitness.com within the 14-day window. Refunds
-                  will be processed to the original payment method within 5-10
-                  business days.
+                  <Link href=""> support@elitefitness.com </Link> within the
+                  14-day window. Refunds will be processed to the original
+                  payment method within 5-10 business days.
                 </p>
               </div>
             </div>

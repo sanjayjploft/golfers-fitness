@@ -1,9 +1,22 @@
 "use client";
-
+import { useState } from "react";
 import { Row, Col, Button, Table, Form } from "react-bootstrap";
 import Link from "next/link";
 
 export default function PlanBillingUI() {
+  const [showPassword, setShowPassword] = useState({
+    current: false,
+    new: false,
+    confirm: false,
+  });
+const togglePassword = (field) => {
+  setShowPassword((prev) => ({
+    ...prev,
+    [field]: !prev[field],
+  }));
+};
+
+
   return (
     <div className="plan-ui-wrapper">
       {/* Plan Card */}
@@ -26,19 +39,60 @@ export default function PlanBillingUI() {
               </h4>
             </div>
             <Row className="mt-4">
+              {/* Current Password */}
               <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Control placeholder="Current Password" />
+                <Form.Group className="mb-3 position-relative">
+                  <Form.Control
+                    type={showPassword.current ? "text" : "password"}
+                    placeholder="Current Password"
+                  />
+                  <img
+                    src={
+                      showPassword.current
+                        ? "/images/eye-close.svg"
+                        : "/images/eye-open.svg"
+                    }
+                    className="eye-icon-setting"
+                    onClick={() => togglePassword("current")}
+                  />
                 </Form.Group>
               </Col>
+
+              {/* New Password */}
               <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Control placeholder="New Password" />
+                <Form.Group className="mb-3 position-relative">
+                  <Form.Control
+                    type={showPassword.new ? "text" : "password"}
+                    placeholder="New Password"
+                  />
+                  <img
+                    src={
+                      showPassword.new
+                        ? "/images/eye-close.svg"
+                        : "/images/eye-open.svg"
+                    }
+                    className="eye-icon-setting"
+                    onClick={() => togglePassword("new")}
+                  />
                 </Form.Group>
               </Col>
+
+              {/* Confirm Password */}
               <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Control placeholder="Confirm New Password" />
+                <Form.Group className="mb-3 position-relative">
+                  <Form.Control
+                    type={showPassword.confirm ? "text" : "password"}
+                    placeholder="Confirm Password"
+                  />
+                  <img
+                    src={
+                      showPassword.confirm
+                        ? "/images/eye-close.svg"
+                        : "/images/eye-open.svg"
+                    }
+                    className="eye-icon-setting"
+                    onClick={() => togglePassword("confirm")}
+                  />
                 </Form.Group>
               </Col>
             </Row>

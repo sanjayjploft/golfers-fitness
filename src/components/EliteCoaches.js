@@ -32,7 +32,7 @@ export default function EliteCoaches() {
     {
       name: "Coach Alex",
       designation: "Functional Mobility",
-      img: "/images/coaches-img-2.png",
+      img: "/images/coaches-img-4.png",
       desc: "Professional performance trainer",
     },
   ];

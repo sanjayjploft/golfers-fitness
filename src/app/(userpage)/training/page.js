@@ -4,7 +4,32 @@ import Link from "next/link";
 import { Container, Row, Col, ProgressBar, Button } from "react-bootstrap";
 
 export default function WorkoutPlans() {
-  const progress = 25;
+const weeksData = [
+  {
+    week: "WEEK 01",
+    title: "Foundations",
+    status: "completed",
+    progress: 100,
+  },
+  {
+    week: "WEEK 02",
+    title: "Strength Phase I",
+    status: "completed",
+    progress: 100,
+  },
+  {
+    week: "WEEK 03",
+    title: "Endurance Split",
+    status: "completed",
+    progress: 100,
+  },
+  {
+    week: "WEEK 04",
+    title: "Hypertrophy Push",
+    status: "active",
+    progress: 60,
+  },
+];
   return (
     <div className="workout-wrapper">
       {/* Breadcrumb */}
@@ -82,159 +107,84 @@ export default function WorkoutPlans() {
       </h5>
 
       <Row className="week-row">
-        {/* Week 1 */}
-        <Col lg={6} md={6}>
-          <div className="week-card">
-            <div className="week-header">
-              <div>
-                <p className="week-small">WEEK 01</p>
-                <h5>Foundations</h5>
-              </div>
-              <span className="status completed">COMPLETED</span>
-            </div>
+        {weeksData.map((item, index) => (
+          <Col lg={6} md={6} key={index}>
+            <div
+              className={`week-card ${item.status === "active" ? "active" : ""}`}>
+              <div className="week-header">
+                <div>
+                  <p className="week-small">{item.week}</p>
+                  <h5>{item.title}</h5>
+                </div>
 
-            <div className="journey-box">
-              <div className="d-flex justify-content-between">
-                <h3>Week 2 of 8</h3>
-                <span>25% Complete</span>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-journey"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}></div>
-              </div>
-            </div>
+                {item.status === "completed" && (
+                  <span className="status completed">COMPLETED</span>
+                )}
 
-            <div className="week-btns">
-              <Link href="#" className="dark-btn">
-                <img src="/images/eye-btn-icon.svg" className="me-2" />
-                See Report
-              </Link>
-              <Link href="#" className="light-btn">
-                <img src="/images/eye-btn-icon-black.svg" className="me-2" />
-                View More
-              </Link>
-            </div>
-          </div>
-        </Col>
-
-        {/* Week 2 */}
-        <Col lg={6} md={6}>
-          <div className="week-card">
-            <div className="week-header">
-              <div>
-                <p className="week-small">WEEK 02</p>
-                <h5>Strength Phase I</h5>
+                {item.status === "active" && (
+                  <span className="status in-progress">
+                    <img src="/images/in-progress-icon.svg" className="mx-2" />
+                    IN PROGRESS
+                  </span>
+                )}
               </div>
-              <span className="status completed">COMPLETED</span>
-            </div>
 
-            <div className="journey-box">
-              <div className="d-flex justify-content-between">
-                <h3>Week 2 of 8</h3>
-                <span>25% Complete</span>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-journey"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}></div>
-              </div>
-            </div>
+              {item.status === "active" && (
+                <p className="progress-label mb-3">
+                  Target : 5 Sessions. Completed : 3
+                </p>
+              )}
 
-            <div className="week-btns">
-              <Link href="" className="dark-btn">
-                <img src="/images/eye-btn-icon.svg" className="me-2" /> See
-                Report
-              </Link>
-              <Link href="" className="light-btn">
-                <img src="/images/eye-btn-icon-black.svg" className="me-2" />{" "}
-                View More
-              </Link>
-            </div>
-          </div>
-        </Col>
+              <div className="journey-box">
+                <div className="d-flex justify-content-between">
+                  <h3>Progress</h3>
+                  <span>{item.progress}% Complete</span>
+                </div>
 
-        {/* Week 3 */}
-        <Col lg={6} md={6}>
-          <div className="week-card">
-            <div className="week-header">
-              <div>
-                <p className="week-small">WEEK 03</p>
-                <h5>Endurance Split</h5>
+                <div className="progress">
+                  <div
+                    className="progress-bar bg-journey"
+                    role="progressbar"
+                    style={{ width: `${item.progress}%` }}></div>
+                </div>
               </div>
-              <span className="status completed">COMPLETED</span>
-            </div>
 
-            <div className="journey-box">
-              <div className="d-flex justify-content-between">
-                <h3>Week 2 of 8</h3>
-                <span>25% Complete</span>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-journey"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}></div>
+              <div className="week-btns">
+                {item.status === "active" ? (
+                  <>
+                    <Link href="" className="dark-btn">
+                      Continue{" "}
+                      <img src="/images/btn-play-icon.svg" className="mx-2" />
+                    </Link>
+                    <Link href="" className="light-btn">
+                      <img
+                        src="/images/eye-btn-icon-black.svg"
+                        className="me-2"
+                      />
+                      View More
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link href="#" className="dark-btn">
+                      <img src="/images/eye-btn-icon.svg" className="me-2" />
+                      See Report
+                    </Link>
+                    <Link href="#" className="light-btn">
+                      <img
+                        src="/images/eye-btn-icon-black.svg"
+                        className="me-2"
+                      />
+                      View More
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
+          </Col>
+        ))}
 
-            <div className="week-btns">
-              <Link href="" className="dark-btn">
-                <img src="/images/eye-btn-icon.svg" className="me-2" />
-                See Report
-              </Link>
-              <Link href="" className="light-btn">
-                <img src="/images/eye-btn-icon-black.svg" className="me-2" />{" "}
-                View More
-              </Link>
-            </div>
-          </div>
-        </Col>
-
-        {/* Week 4 */}
-        <Col lg={6} md={6}>
-          <div className="week-card active">
-            <div className="week-header">
-              <div>
-                <p className="week-small">WEEK 04</p>
-                <h5>Hypertrophy Push</h5>
-              </div>
-              <span className="status in-progress">
-                <img src="/images/in-progress-icon.svg" className="mx-2" />
-                IN PROGRESS
-              </span>
-            </div>
-
-            <p className="progress-label mb-3">
-              Target : 5 Sessions. Completed : 3
-            </p>
-            <div className="journey-box">
-              <div className="d-flex justify-content-between">
-                <h3>Week 2 of 8</h3>
-                <span>25% Complete</span>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-journey"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}></div>
-              </div>
-            </div>
-
-            <div className="week-btns">
-              <Link href="" className="dark-btn">
-                Continue{" "}
-                <img src="/images/btn-play-icon.svg" className="mx-2" />
-              </Link>
-              <Link href="" className="light-btn">
-                <img src="/images/eye-btn-icon-black.svg" className="me-2" />{" "}
-                View More
-              </Link>
-            </div>
-          </div>
-        </Col>
+        {/* Locked Card (same as before) */}
         <Col lg={6} md={6}>
           <div className="week-card locked-card">
             <div className="week-header">
@@ -251,12 +201,11 @@ export default function WorkoutPlans() {
             <div className="journey-box">
               <div className="d-flex justify-content-between">
                 <h3>Week 2 of 8</h3>
-                <span>25% Complete</span>
+                <span>0% Complete</span>
               </div>
+
               <div className="progress">
-                <div
-                  className="progress-bar bg-journey"
-                  role="progressbar"></div>
+                <div className="progress-bar bg-journey"></div>
               </div>
             </div>
 

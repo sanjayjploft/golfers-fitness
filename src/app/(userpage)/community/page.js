@@ -34,10 +34,18 @@ function page() {
     setCurrent(formatTime(currentTime));
   };
 
-  const playVideo = () => {
+const toggleVideo = () => {
+  if (!videoRef.current) return;
+
+  if (videoRef.current.paused) {
     videoRef.current.play();
     setPlaying(true);
-  };
+  } else {
+    videoRef.current.pause();
+    setPlaying(false);
+  }
+};
+
   return (
     <div>
       <div className="feed-bg">
@@ -96,7 +104,10 @@ function page() {
                     </div>
 
                     <div>
-                      <div className="postName">Marcus Chen</div>
+                      <div className="postName">
+                        Marcus Chen{" "}
+                        <img src="/images/verified.svg" className="me-3" />
+                      </div>
 
                       <div className="postMeta">
                         Professional CrossFit Athlete • 2h ago
@@ -256,6 +267,7 @@ function page() {
                       className="postVideo"
                       poster="/images/video-thumb.png"
                       preload="metadata"
+                      onClick={toggleVideo}
                       onLoadedMetadata={handleLoaded}
                       onTimeUpdate={handleTimeUpdate}>
                       <source src="/images/workout.mp4" type="video/mp4" />
@@ -265,8 +277,8 @@ function page() {
                       <>
                         <div className="videoOverlay"></div>
 
-                        <div className="playButton" onClick={playVideo}>
-                          ▶
+                        <div className="playButton" onClick={toggleVideo}>
+                          {playing ? "❚❚" : "▶"}
                         </div>
                       </>
                     )}
@@ -373,6 +385,7 @@ function page() {
                       className="postVideo"
                       poster="/images/video-thumb.png"
                       preload="metadata"
+                      onClick={toggleVideo}
                       onLoadedMetadata={handleLoaded}
                       onTimeUpdate={handleTimeUpdate}>
                       <source src="/images/workout.mp4" type="video/mp4" />
@@ -382,8 +395,8 @@ function page() {
                       <>
                         <div className="videoOverlay"></div>
 
-                        <div className="playButton" onClick={playVideo}>
-                          ▶
+                        <div className="playButton" onClick={toggleVideo}>
+                          {playing ? "❚❚" : "▶"}
                         </div>
                       </>
                     )}

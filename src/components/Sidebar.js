@@ -114,8 +114,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <h3 className="logout-md-title">Log Out?</h3>
 
             <p className="logout-md-desc">
-              Are you sure you want to log out? You will need to sign in again
-              to access your account.
+              Are you sure you want to log out? You will need to enter your
+              credentials to log back in to your account.
             </p>
 
             <Link href="/" className="logout-md-btn logout-md-confirm">
