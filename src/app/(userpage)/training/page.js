@@ -8,19 +8,19 @@ const weeksData = [
   {
     week: "WEEK 01",
     title: "Foundations",
-    status: "completed",
+    status: "",
     progress: 100,
   },
   {
     week: "WEEK 02",
     title: "Strength Phase I",
-    status: "completed",
+    status: "",
     progress: 100,
   },
   {
     week: "WEEK 03",
     title: "Endurance Split",
-    status: "completed",
+    status: "",
     progress: 100,
   },
   {
@@ -138,7 +138,7 @@ const weeksData = [
               <div className="journey-box">
                 <div className="d-flex justify-content-between">
                   <h3>Progress</h3>
-                  <span>{item.progress}% Complete</span>
+                  <span>{item.progress}% </span>
                 </div>
 
                 <div className="progress">
@@ -201,7 +201,7 @@ const weeksData = [
             <div className="journey-box">
               <div className="d-flex justify-content-between">
                 <h3>Week 2 of 8</h3>
-                <span>0% Complete</span>
+                <span>0%</span>
               </div>
 
               <div className="progress">
