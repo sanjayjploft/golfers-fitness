@@ -511,11 +511,11 @@ a.nav-link {
 }
 
 .coach-prev {
-  left: 0;
+  left: -10px;
 }
 
 .coach-next {
-  right:0px;
+  right:-10px;
 }
 
 /* hide default arrows */
