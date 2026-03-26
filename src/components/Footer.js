@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="elite-footer">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           {/* Left Section */}
           <div className="col-lg-4">
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <h6 className="footer-title">STAY UPDATED</h6>
 
             <div className="subscribe-box">

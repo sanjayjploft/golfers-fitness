@@ -31,7 +31,7 @@ export default function Home() {
 
       <ProfessionalMethods />
       <section className="ai-tracking-section">
-        <div className="container">
+        <div className="container-fluid">
           <div className="section-head text-center">
             <p className="small-title">PROPRIETARY AI TECH</p>
             <h2>AI MOTION TRACKING</h2>
@@ -101,7 +101,7 @@ export default function Home() {
       </section>
       <EliteWorkouts />
       <section className="get-started-section">
-        <div className="container">
+        <div className="container-fluid">
           <Row className="align-items-center">
             {/* Left Content */}
             <Col lg={12}>

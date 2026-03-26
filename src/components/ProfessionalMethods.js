@@ -11,7 +11,7 @@ export default function ProfessionalMethods() {
 
   return (
     <section className="methods-section">
-      <div className="container">
+      <div className="container-fluid">
         <Row className="align-items-center g-5">
           {/* LEFT TEXT */}
 

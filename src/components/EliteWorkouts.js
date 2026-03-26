@@ -9,7 +9,7 @@ export default function EliteWorkouts() {
 
   return (
     <section className="workouts-section">
-      <div className="container">
+      <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center flex-wrap">
           <div className="section-head">
             <p className="small-title">Library</p>
