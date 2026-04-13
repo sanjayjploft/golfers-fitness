@@ -40,9 +40,9 @@ export default function EliteCoaches() {
   return (
     <section className="coaches-section" id="viewcoaches">
       <div className="container-fluid">
-        <Row className="align-items-center">
+        <Row className="align-items-center mb-5">
           <Col lg={6}>
-            <div className="section-head">
+            <div className="section-head mb-0">
               <p className="small-title">EXPERT GUIDANCE</p>
               <h2>THE ELITE COACHES</h2>
             </div>

@@ -27,7 +27,7 @@ export default function ProfessionalMethods() {
             </p>
 
             <div className="methods-stats d-flex gap-5">
-              <div>
+              <div className="me-5">
                 <h3>98%</h3>
                 <p>Accuracy in Form Analysis</p>
               </div>

@@ -32,7 +32,7 @@ export default function Home() {
       <ProfessionalMethods />
       <section className="ai-tracking-section">
         <div className="container-fluid">
-          <div className="section-head text-center">
+          <div className="section-head text-center heading-big-size">
             <p className="small-title">PROPRIETARY AI TECH</p>
             <h2>AI MOTION TRACKING</h2>
           </div>

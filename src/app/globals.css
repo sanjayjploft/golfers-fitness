@@ -409,7 +409,7 @@ a.nav-link {
 }
 
 .section-head {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .section-head h2 {
@@ -421,6 +421,7 @@ a.nav-link {
   letter-spacing: -0.9px;
   text-transform: uppercase;
 }
+.heading-big-size h2 { font-size: 48px;}
 .small-title {
   color: #a49a87;
   font-size: 12px;
@@ -496,6 +497,8 @@ a.nav-link {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
+  margin-bottom: 0px;
+    margin-top: 12px;
 }
 
 /* arrows */
@@ -4548,11 +4551,14 @@ button.discard-changes:hover {
 }
 
 @media (max-width: 768px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem; 
+}
   .tabs button {
     margin-left: 5px;
 }
   .hero-section {
-    height: 60vh;
+    height: 80vh;
   }
   .hero-content h1 {
     letter-spacing: 0;
